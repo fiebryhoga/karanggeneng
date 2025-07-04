@@ -7,7 +7,7 @@ const NavigationHero = ({ title, description, to }) => {
   return (
     <Link
       href="/#"
-      className="w-full flex flex-col gap-2 md:gap-4 border-l-4 md:border-l-0 md:border-b-4 border-white hover:border-blue-800 py-1 sm:py-2 md:py-4 px-4 md:px-12 cursor-pointer group transition-all duration-300 md:bg-transparent hover:bg-white/80 bg-white/20 rounded-r-lg md:rounded-r-none md:rounded-t-lg group"
+      className="w-full flex flex-col md:justify-between gap-2 md:gap-4 border-l-4 md:border-l-0 md:border-b-4 border-white hover:border-blue-800 py-1 sm:py-2 md:py-4 px-4 md:px-12 cursor-pointer group transition-all duration-300 md:bg-transparent hover:bg-white/80 bg-white/20 rounded-r-lg md:rounded-r-none md:rounded-t-lg group"
     >
       <p className="text-justify text-white text-sm font-medium group-hover:text-blue-800">
         {description}

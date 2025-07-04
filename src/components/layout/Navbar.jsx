@@ -34,19 +34,22 @@ const Navbar = () => {
     } transition-all duration-300 ease-in-out h-10 px-4 flex flex-row justify-center items-center`;
 
   return (
-    <nav className="flex flex-row fixed w-full justify-between items-center px-8 md:px-16 xl:px-28 py-3 border-b border-b-blue-800/20 shadow shadow-blue-800/20 z-20 bg-white">
+    <nav className="flex flex-row fixed w-full justify-between items-center px-6 md:px-16 xl:px-28 py-3 border-b border-b-blue-800/20 shadow shadow-blue-800/20 z-20 bg-white">
       {/* Logo */}
-      <Link href="/" className="flex flex-row gap-4 justify-start items-center">
+      <Link
+        href="/"
+        className="flex flex-row gap-3 md:gap-4 justify-start items-center"
+      >
         <img
           src="/assets/image/layout/logo-desa-karanggeneng.png"
           alt="Logo Desa Karanggeneng"
-          className="w-12"
+          className="w-10 md:w-12"
         />
         <div className="flex flex-col">
           <h1 className="text-blue-800 font-extrabold text-lg xl:text-xl">
             Desa Karanggeneng
           </h1>
-          <p className="text-yellow-700 font-medium text-sm lg:hidden xl:block">
+          <p className="text-yellow-700 font-medium text-xs md:text-sm lg:hidden xl:block">
             Kec. Karanggeneng Kab. Lamongan
           </p>
         </div>
@@ -192,7 +195,7 @@ const Navbar = () => {
         } top-0 left-0 w-full h-full bg-white z-40 overflow-y-auto`}
       >
         {/* Mobile header inside mobile menu */}
-        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200">
+        <div className="flex justify-between items-center px-6 py-3 border-b border-gray-200">
           <Link
             href="/"
             className="flex items-center gap-3"
@@ -220,10 +223,11 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="flex flex-col p-8 gap-4">
+        <div className="flex flex-col p-8 gap-4 text-blue-900 font-sans">
+          {/* Beranda */}
           <Link
             href="/"
-            className="text-black font-semibold text-lg"
+            className="text-lg font-semibold px-2 py-2 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Beranda
@@ -232,69 +236,87 @@ const Navbar = () => {
           {/* Dropdown Profil Desa */}
           <div>
             <button
-              className="flex justify-between items-center w-full text-black font-semibold text-lg"
+              className={`flex justify-between items-center w-full text-lg font-semibold px-2 py-2 rounded hover:bg-blue-100 transition-colors ${
+                openDropdown === "profilDesa"
+                  ? "text-blue-700"
+                  : "text-blue-900"
+              }`}
               onClick={() => toggleDropdown("profilDesa")}
             >
-              Profil Desa <MdKeyboardArrowDown />
+              Profil Desa
+              <MdKeyboardArrowDown
+                className={`transform transition-transform duration-300 ${
+                  openDropdown === "profilDesa" ? "rotate-180" : ""
+                }`}
+              />
             </button>
-            {openDropdown === "profilDesa" && (
-              <div className="pl-4 flex flex-col gap-2 mt-2">
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openDropdown === "profilDesa"
+                  ? "max-h-[500px] opacity-100 mt-2"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div className="pl-4 flex flex-col gap-2 border-l border-blue-300">
                 <Link
                   href="/pemerintahan"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Aparatur Pemerintahan
                 </Link>
                 <Link
                   href="/visiMisi"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Visi - Misi
                 </Link>
                 <Link
                   href="/lembagaDesa"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Lembaga Desa
                 </Link>
                 <Link
                   href="/demografiDesa"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
-                  Denografi Desa
+                  Demografi Desa
                 </Link>
                 <Link
                   href="/fasilitasDesa"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Fasilitas Desa
                 </Link>
                 <Link
                   href="/petaDesa"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Peta Desa
                 </Link>
               </div>
-            )}
+            </div>
           </div>
 
+          {/* Lembaga */}
           <Link
             href="/#"
-            className="text-black font-semibold text-lg"
+            className="text-lg font-semibold px-2 py-2 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Lembaga
           </Link>
+
+          {/* Produk Hukum */}
           <Link
             href="/#"
-            className="text-black font-semibold text-lg"
+            className="text-lg font-semibold px-2 py-2 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Produk Hukum
@@ -303,34 +325,48 @@ const Navbar = () => {
           {/* Dropdown Layanan */}
           <div>
             <button
-              className="flex justify-between items-center w-full text-black font-semibold text-lg"
+              className={`flex justify-between items-center w-full text-lg font-semibold px-2 py-2 rounded hover:bg-blue-100 transition-colors ${
+                openDropdown === "layanan" ? "text-blue-700" : "text-blue-900"
+              }`}
               onClick={() => toggleDropdown("layanan")}
             >
-              Layanan <MdKeyboardArrowDown />
+              Layanan
+              <MdKeyboardArrowDown
+                className={`transform transition-transform duration-300 ${
+                  openDropdown === "layanan" ? "rotate-180" : ""
+                }`}
+              />
             </button>
-            {openDropdown === "layanan" && (
-              <div className="pl-4 flex flex-col gap-2 mt-2">
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openDropdown === "layanan"
+                  ? "max-h-[500px] opacity-100 mt-2"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div className="pl-4 flex flex-col gap-2 border-l border-blue-300">
                 <Link
                   href="/pemerintahan"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Pengajuan
                 </Link>
                 <Link
                   href="/demografiDesa"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Pengaduan
                 </Link>
               </div>
-            )}
+            </div>
           </div>
 
+          {/* Berita */}
           <Link
             href="/#"
-            className="text-black font-semibold text-lg"
+            className="text-lg font-semibold px-2 py-2 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Berita
@@ -339,29 +375,42 @@ const Navbar = () => {
           {/* Dropdown Galeri */}
           <div>
             <button
-              className="flex justify-between items-center w-full text-black font-semibold text-lg"
+              className={`flex justify-between items-center w-full text-lg font-semibold px-2 py-2 rounded hover:bg-blue-100 transition-colors ${
+                openDropdown === "galeri" ? "text-blue-700" : "text-blue-900"
+              }`}
               onClick={() => toggleDropdown("galeri")}
             >
-              Galeri <MdKeyboardArrowDown />
+              Galeri
+              <MdKeyboardArrowDown
+                className={`transform transition-transform duration-300 ${
+                  openDropdown === "galeri" ? "rotate-180" : ""
+                }`}
+              />
             </button>
-            {openDropdown === "galeri" && (
-              <div className="pl-4 flex flex-col gap-2 mt-2">
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openDropdown === "galeri"
+                  ? "max-h-[500px] opacity-100 mt-2"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div className="pl-4 flex flex-col gap-2 border-l border-blue-300">
                 <Link
                   href="/pemerintahan"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Foto
                 </Link>
                 <Link
                   href="/demografiDesa"
                   onClick={() => setMobileOpen(false)}
-                  className="text-black"
+                  className="text-sm py-2 px-2 rounded hover:bg-blue-50 transition-colors"
                 >
                   Video
                 </Link>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
