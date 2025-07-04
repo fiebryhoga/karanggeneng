@@ -7,7 +7,8 @@ const Berita = () => {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-8 md:gap-16 justify-center items-center">
-        {/* Judul dan Deskripsi */}
+
+
         <div className="flex flex-col justify-center items-center w-full md:max-w-3xl gap-4 text-center">
           <h1 className="text-blue-800 font-extrabold text-xl md:text-4xl">
             Informasi Terbaru
@@ -77,7 +78,7 @@ const Berita = () => {
         </div>
         <div className="w-full flex justify-center items-center">
           <Link
-            href="/#"
+            href="/berita"
             className="text-base medium rounded-lg bg-blue-800 text-white hover:text-blue-800 hover:bg-white px-8 py-3 transition-all ease-in-out duration-300 border border-blue-800"
           >
             Lihat Selengkapnya

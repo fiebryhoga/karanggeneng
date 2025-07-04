@@ -42,7 +42,7 @@ const DemografiSingkat = () => {
         </div>
         <div className="w-full flex justify-center items-center">
           <Link
-            href="/#"
+            href="/demografi"
             className="text-base medium rounded-lg bg-blue-800 text-white hover:text-blue-800 hover:bg-white px-8 py-3 transition-all ease-in-out duration-300 border border-blue-800"
           >
             Lihat Selengkapnya
