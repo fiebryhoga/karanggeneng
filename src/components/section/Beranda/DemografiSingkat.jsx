@@ -10,14 +10,11 @@ import {
   FaUserClock,
 } from "react-icons/fa6";
 import Link from "next/link";
-  
 
 const DemografiSingkat = () => {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-8 md:gap-16 justify-center items-center">
-
-        
         {/* Judul dan Deskripsi */}
         <div className="flex flex-col justify-center items-center w-full md:max-w-3xl gap-4 text-center">
           <h1 className="text-blue-800 font-extrabold text-xl md:text-4xl">
@@ -37,29 +34,19 @@ const DemografiSingkat = () => {
             title="Kepala Keluarga"
             value={1432}
           />
-          <CardDemografi
-            icon={FaPerson}
-            title="Laki-Laki"
-            value={2876}
-          />
-          <CardDemografi
-            icon={FaPersonDress}
-            title="Perempuan"
-            value={2931}
-          />
+          <CardDemografi icon={FaPerson} title="Laki-Laki" value={2876} />
+          <CardDemografi icon={FaPersonDress} title="Perempuan" value={2931} />
           <CardDemografi icon={FaUsers} title="Penduduk" value={5807} />
-          <CardDemografi
-            icon={FaChildren}
-            title="Anak-anak"
-            value={987}
-          />
+          <CardDemografi icon={FaChildren} title="Anak-anak" value={987} />
           <CardDemografi icon={FaUserClock} title="Lansia" value={456} />
         </div>
         <div className="w-full flex justify-center items-center">
-            <Link href="/#" className="text-base medium rounded-lg bg-blue-800 text-white hover:text-blue-800 hover:bg-white px-8 py-3 transition-all ease-in-out duration-300 border border-blue-800">
+          <Link
+            href="/#"
+            className="text-base medium rounded-lg bg-blue-800 text-white hover:text-blue-800 hover:bg-white px-8 py-3 transition-all ease-in-out duration-300 border border-blue-800"
+          >
             Lihat Selengkapnya
-            </Link>
-
+          </Link>
         </div>
       </div>
     </SectionWrapper>

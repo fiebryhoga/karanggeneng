@@ -113,20 +113,20 @@ const Navbar = () => {
         </div>
 
         <Link
-          href="/#"
+          href="/lembaga"
           className="h-10 flex flex-row justify-center items-center lg:px-3 xl:px-5 hover:text-blue-800/80 border-b-2 border-transparent hover:border-b-2 hover:border-blue-800"
         >
           Lembaga
         </Link>
         <Link
-          href="/#"
+          href="/produkHukum"
           className="h-10 flex flex-row justify-center items-center lg:px-3 xl:px-5 hover:text-blue-800/80 border-b-2 border-transparent hover:border-b-2 hover:border-blue-800"
         >
           Produk Hukum
         </Link>
 
         <div className="relative group">
-          <ul className={navItemClassMulti(["/about", "/portofolio"])}>
+          <ul className={navItemClassMulti(["/pengajuan", "/pengaduan"])}>
             <div
               className={`${linkClass} pl-2 flex flex-row gap-1 items-center`}
             >
@@ -135,13 +135,13 @@ const Navbar = () => {
           </ul>
           <div className="absolute top-full lg:text-sm xl:text-base w-56 left-0 bg-white rounded-b-md shadow-md hidden group-hover:block z-50 pt-2">
             <Link
-              href="/pemerintahan"
+              href="/pengajuan"
               className="block px-6 py-2 text-black hover:bg-blue-800/20 hover:text-yellow-700"
             >
               Pengajuan
             </Link>
             <Link
-              href="/demografiDesa"
+              href="/pengaduan"
               className="block px-6 py-2 text-black hover:bg-blue-800/20 hover:text-yellow-700 rounded-b-md"
             >
               Pengaduan
@@ -149,14 +149,14 @@ const Navbar = () => {
           </div>
         </div>
         <Link
-          href="/#"
+          href="/berita"
           className="h-10 flex flex-row justify-center items-center lg:px-3 xl:px-5 hover:text-blue-800/80 border-b-2 border-transparent hover:border-b-2 hover:border-blue-800"
         >
           Berita
         </Link>
 
         <div className="relative group">
-          <ul className={navItemClassMulti(["/about", "/portofolio"])}>
+          <ul className={navItemClassMulti(["/foto", "/video"])}>
             <div
               className={`${linkClass} pl-2 flex flex-row gap-1 items-center`}
             >
@@ -165,13 +165,13 @@ const Navbar = () => {
           </ul>
           <div className="absolute top-full lg:text-sm xl:text-base lg:w-20 xl:w-44 left-0 bg-white rounded-b-md shadow-md hidden group-hover:block z-50 pt-2">
             <Link
-              href="/pemerintahan"
+              href="/foto"
               className="block px-6 py-2 text-black hover:bg-blue-800/20 hover:text-yellow-700"
             >
               Foto
             </Link>
             <Link
-              href="/demografiDesa"
+              href="video"
               className="block px-6 py-2 text-black hover:bg-blue-800/20 hover:text-yellow-700 rounded-b-md"
             >
               Video
@@ -244,7 +244,8 @@ const Navbar = () => {
               onClick={() => toggleDropdown("profilDesa")}
             >
               Profil Desa
-              <MdKeyboardArrowDown size={24}
+              <MdKeyboardArrowDown
+                size={24}
                 className={`transform transition-transform duration-300 ${
                   openDropdown === "profilDesa" ? "rotate-180" : ""
                 }`}
@@ -306,7 +307,7 @@ const Navbar = () => {
 
           {/* Lembaga */}
           <Link
-            href="/#"
+            href="/lembaga"
             className="text-base bg-blue-800/5 border-y border-y-white px-7 border-l-2 border-l-blue-800 font-medium py-4 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
@@ -315,7 +316,7 @@ const Navbar = () => {
 
           {/* Produk Hukum */}
           <Link
-            href="/#"
+            href="/produkHukum"
             className="text-base bg-blue-800/5 border-y border-y-white px-7 border-l-2 border-l-blue-800 font-medium py-4 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
@@ -331,7 +332,8 @@ const Navbar = () => {
               onClick={() => toggleDropdown("layanan")}
             >
               Layanan
-              <MdKeyboardArrowDown size={24}
+              <MdKeyboardArrowDown
+                size={24}
                 className={`transform transition-transform duration-300 ${
                   openDropdown === "layanan" ? "rotate-180" : ""
                 }`}
@@ -346,14 +348,14 @@ const Navbar = () => {
             >
               <div className="pl-4 flex flex-col gap-2 border-l border-blue-300">
                 <Link
-                  href="/pemerintahan"
+                  href="/pengajuan"
                   onClick={() => setMobileOpen(false)}
                   className="text-sm py-2 px-8 rounded hover:bg-blue-50 transition-colors"
                 >
                   Pengajuan
                 </Link>
                 <Link
-                  href="/demografiDesa"
+                  href="/pengaduan"
                   onClick={() => setMobileOpen(false)}
                   className="text-sm py-2 px-8 rounded hover:bg-blue-50 transition-colors"
                 >
@@ -365,7 +367,7 @@ const Navbar = () => {
 
           {/* Berita */}
           <Link
-            href="/#"
+            href="/berita"
             className="text-base bg-blue-800/5 border-y border-y-white px-7 border-l-2 border-l-blue-800 font-medium py-4 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
@@ -381,7 +383,8 @@ const Navbar = () => {
               onClick={() => toggleDropdown("galeri")}
             >
               Galeri
-              <MdKeyboardArrowDown size={24}
+              <MdKeyboardArrowDown
+                size={24}
                 className={`transform transition-transform duration-300 ${
                   openDropdown === "galeri" ? "rotate-180" : ""
                 }`}
@@ -396,14 +399,14 @@ const Navbar = () => {
             >
               <div className="pl-4 flex flex-col gap-2 border-l border-blue-300">
                 <Link
-                  href="/pemerintahan"
+                  href="/foto"
                   onClick={() => setMobileOpen(false)}
                   className="text-sm py-2 px-8 rounded hover:bg-blue-50 transition-colors"
                 >
                   Foto
                 </Link>
                 <Link
-                  href="/demografiDesa"
+                  href="/video"
                   onClick={() => setMobileOpen(false)}
                   className="text-sm py-2 px-8 rounded hover:bg-blue-50 transition-colors"
                 >
