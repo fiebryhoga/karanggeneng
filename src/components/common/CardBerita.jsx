@@ -49,9 +49,11 @@ const CardBerita = ({
           </div>
         </div>
 
-        <p className=" hidden md:block text-xs md:text-sm text-black/80 font-sans line-clamp-3">
-          {description}
-        </p>
+        <div className="hidden md:block">
+          <p className="  text-xs md:text-sm text-black/80 font-sans md:line-clamp-3">
+            {description}
+          </p>
+        </div>
 
         <div className="mt-auto pt-2">
           <div className="inline-flex items-center gap-1 text-xs font-semibold text-blue-800/60 hover:text-blue-800 cursor-pointer transition-colors">
