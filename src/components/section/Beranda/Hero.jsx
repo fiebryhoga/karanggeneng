@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="w-full h-screen flex flex-col justify-center items-center relative bg-gradient-to-t from-black via-black to-blue-900 overflow-hidden">
       {/* Background image */}
       <img
-        src="/assets/image/beranda/bg-hero.jpeg"
+        src="/assets/image/home/bg-hero.jpeg"
         className="w-full h-full absolute object-cover opacity-35"
         alt="Background"
       />
