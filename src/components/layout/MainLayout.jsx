@@ -1,16 +1,19 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
-const MainLayout = () => {
+const MainLayout = ({ children }) => {
   return (
     <div>
-        <Navbar/>
+      <Navbar />
 
-        <Footer/>
-      
+      <main className="flex min-h-screen flex-col w-full justify-start items-center">
+        {children}
+      </main>
+
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
