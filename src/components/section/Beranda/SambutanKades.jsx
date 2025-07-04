@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 
 const SambutanKades = () => {
+  const [aosEffect, setAosEffect] = useState("fade-up");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth >= 1024) {
+        setAosEffect("fade-right");
+      } else {
+        setAosEffect("fade-up");
+      }
+    }
+  }, []);
+
   return (
     <SectionWrapper>
       <div className="w-full flex flex-col lg:flex-row justify-between items-center md:gap-10">
@@ -19,14 +31,14 @@ const SambutanKades = () => {
           {/* Nama Kepala Desa */}
           <h1
             className="text-lg sm:text-xl md:text-3xl lg:text-4xl text-center md:text-left w-full text-blue-800 font-extrabold font-sans"
-            data-aos="fade-right"
+            data-aos={aosEffect}
             data-aos-duration="1000"
           >
             Muhammad Joe Biden, S.H., M.H.
           </h1>
           <p
             className="text-sm sm:text-base font-semibold text-yellow-700 text-center md:text-left w-full"
-            data-aos="fade-right"
+            data-aos={aosEffect}
             data-aos-duration="2000"
           >
             Kepala Desa Karanggeneng 2019-2027
@@ -34,11 +46,11 @@ const SambutanKades = () => {
 
           {/* Sambutan */}
           <div
-            className="py-6 px-4 sm:px-6 md:px-8 lg:px-12 border-t-4 border-t-blue-800 md:border-t-0 md:border-l-4 border-l-blue-800 bg-blue-800/10 rounded-b-2xl md:rounded-b-none md:rounded-r-2xl mt-6 md:mt-12"
-            data-aos="fade-right"
+            className="py-6 px-4 sm:px-6 md:px-8 lg:px-12 border-t-4 border-t-blue-800 md:border-t-0 md:border-l-4 border-l-blue-800 bg-blue-800/10 rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl mt-6 md:mt-12"
+            data-aos={aosEffect}
             data-aos-duration="3000"
           >
-            <p className="text-xs sm:text-sm md:text-base text-black/70 font-medium text-justify leading-7">
+            <p className="text-xs sm:text-sm md:text-base text-black/70 font-medium text-justify leading-6 md:leading-7">
               Assalamualaikum Warahmatullahi Wabarakatuh. <br /> <br />
               Puji syukur ke hadirat Tuhan Yang Maha Esa, dengan bangga kami
               hadirkan website resmi Desa Karanggeneng sebagai wujud komitmen
