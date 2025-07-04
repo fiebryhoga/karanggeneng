@@ -57,7 +57,7 @@ const CardBerita = ({
 
         <div className="mt-auto pt-2">
           <div className="inline-flex items-center gap-1 text-xs font-semibold text-blue-800/60 hover:text-blue-800 cursor-pointer transition-colors">
-            Lihat Selengkapnya <FiArrowRight size={14} />
+            Lihat Selengkapnya <FiArrowRight size={15} />
           </div>
         </div>
       </div>
