@@ -12,16 +12,16 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="flex pb-10 flex-col justify-end md:justify-center items-end md:items-center gap-14 sm:gap-20 md:gap-0 w-full h-full relative z-10 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex pb-10 flex-col justify-end lg:justify-center items-end lg:items-center gap-14 sm:gap-20 lg:gap-0 w-full h-full relative z-10 lg:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Welcome Text */}
-        <div className="flex flex-col justify-center items-center w-full gap-6 md:gap-2 text-center">
-          <h1 className="text-lg sm:text-xl md:text-2xl text-white font-extrabold font-sans">
+        <div className="flex flex-col justify-center items-center w-full gap-6 lg:gap-2 text-center">
+          <h1 className="text-lg sm:text-xl lg:text-2xl text-white font-extrabold font-sans">
             SELAMAT DATANG
           </h1>
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-extrabold font-sans leading-tight">
             WEBSITE RESMI DESA KARANGGENENG
           </h2>
-          <p className="hidden md:block text-xs sm:text-sm md:text-base text-white font-medium mt-6 max-w-4xl">
+          <p className="hidden md:px-16 lg:px-0 md:block text-xs sm:text-sm lg:text-base text-white font-medium mt-6 max-w-4xl">
             Sumber informasi dan portal digital Desa Karanggeneng. Website ini
             adalah langkah kami untuk mewujudkan pemerintahan yang transparan
             dan informatif. Mari bersama-sama membangun Desa Karanggeneng yang
@@ -30,8 +30,8 @@ const Hero = () => {
         </div>
 
         {/* Navigation Cards */}
-        <div className="w-full md:absolute bottom-0 block py-3 md:py-10">
-          <div className="flex flex-col lg:flex-row gap-4 md:gap-0 w-full">
+        <div className="w-full md:flex lg:flex-none md:justify-center md:items-center lg:absolute bottom-0 block py-3 lg:py-10">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 w-full md:w-lg lg:w-full ">
             <NavigationHero
               title="Info Terbaru"
               description="Temukan berita, pengumuman penting, dan jadwal kegiatan terbaru dari Pemerintah Desa Karanggeneng."
