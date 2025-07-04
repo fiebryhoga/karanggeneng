@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
 
         {/* Navigation Cards */}
-        <div className="w-full md:absolute bottom-0 block py-3">
+        <div className="w-full md:absolute bottom-0 block py-3 md:py-10">
           <div className="flex flex-col lg:flex-row gap-4 md:gap-0 w-full">
             <NavigationHero
               title="Info Terbaru"
