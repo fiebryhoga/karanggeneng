@@ -12,7 +12,7 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="flex pb-10 flex-col justify-end md:justify-center items-end md:items-center gap-14 sm:gap-20 md:gap-0 w-full h-full relative z-10 md:pb-24 sm:px-10 md:px-20">
+      <div className="flex pb-10 flex-col justify-end md:justify-center items-end md:items-center gap-14 sm:gap-20 md:gap-0 w-full h-full relative z-10 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Welcome Text */}
         <div className="flex flex-col justify-center items-center w-full gap-6 md:gap-2 text-center">
           <h1 className="text-lg sm:text-xl md:text-2xl text-white font-extrabold font-sans">
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
 
         {/* Navigation Cards */}
-        <div className="w-full md:absolute bottom-0 md:px-20 block py-3 px-8">
+        <div className="w-full md:absolute bottom-0 block py-3">
           <div className="flex flex-col lg:flex-row gap-4 md:gap-0 w-full">
             <NavigationHero
               title="Info Terbaru"
