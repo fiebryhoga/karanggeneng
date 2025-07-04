@@ -39,21 +39,21 @@ const DemografiSingkat = () => {
           />
           <CardDemografi
             icon={FaPerson}
-            title="Jumlah Laki-Laki"
+            title="Laki-Laki"
             value={2876}
           />
           <CardDemografi
             icon={FaPersonDress}
-            title="Jumlah Perempuan"
+            title="Perempuan"
             value={2931}
           />
-          <CardDemografi icon={FaUsers} title="Jumlah Penduduk" value={5807} />
+          <CardDemografi icon={FaUsers} title="Penduduk" value={5807} />
           <CardDemografi
             icon={FaChildren}
-            title="Jumlah Anak-anak"
+            title="Anak-anak"
             value={987}
           />
-          <CardDemografi icon={FaUserClock} title="Jumlah Lansia" value={456} />
+          <CardDemografi icon={FaUserClock} title="Lansia" value={456} />
         </div>
         <div className="w-full flex justify-center items-center">
             <Link href="/#" className="text-base medium rounded-lg bg-blue-800 text-white hover:text-blue-800 hover:bg-white px-8 py-3 transition-all ease-in-out duration-300 border border-blue-800">
