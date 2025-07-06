@@ -74,7 +74,7 @@ const Navbar = () => {
           </ul>
           <div className="absolute top-full lg:text-sm xl:text-base w-56 left-0 bg-white rounded-b-md shadow-md hidden group-hover:block z-50 pt-2">
             <Link
-              href="/pemerintahan"
+              href="/profil-desa/pemerintahan"
               className="block px-6 py-2 text-black hover:bg-blue-800/20 hover:text-yellow-700"
             >
               Aparatur Pemerintahan
@@ -149,10 +149,10 @@ const Navbar = () => {
           </div>
         </div>
         <Link
-          href="/berita"
+          href="/informasi"
           className="h-10 flex flex-row justify-center items-center lg:px-3 xl:px-5 hover:text-blue-800/80 border-b-2 border-transparent hover:border-b-2 hover:border-blue-800"
         >
-          Berita
+          Informasi
         </Link>
 
         <div className="relative group">
@@ -260,7 +260,7 @@ const Navbar = () => {
             >
               <div className="pl-4 flex flex-col gap-2 border-l border-blue-300">
                 <Link
-                  href="/pemerintahan"
+                  href="/profil-desa/pemerintahan"
                   onClick={() => setMobileOpen(false)}
                   className="text-sm py-2 px-8 rounded hover:bg-blue-50 transition-colors"
                 >
@@ -365,13 +365,12 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Berita */}
           <Link
-            href="/berita"
+            href="/informasi"
             className="text-base bg-blue-800/5 border-y border-y-white px-7 border-l-2 border-l-blue-800 font-medium py-4 rounded hover:bg-blue-100 transition-colors"
             onClick={() => setMobileOpen(false)}
           >
-            Berita
+            Informasi
           </Link>
 
           {/* Dropdown Galeri */}

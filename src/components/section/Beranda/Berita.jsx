@@ -10,7 +10,7 @@ const Berita = () => {
 
 
         <div className="flex flex-col justify-center items-center w-full md:max-w-3xl gap-4 text-center">
-          <h1 className="text-blue-800 font-extrabold text-xl md:text-4xl">
+          <h1 className=" text-black font-extrabold text-xl md:text-4xl">
             Informasi Terbaru
           </h1>
           <p className=" text-xs md:text-sm font-medium">
