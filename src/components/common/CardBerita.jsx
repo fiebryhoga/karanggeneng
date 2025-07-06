@@ -19,10 +19,10 @@ const CardBerita = ({
       className="w-full border border-blue-800/20 rounded-xl overflow-hidden shadow-sm shadow-blue-800/20 transition-shadow duration-300 bg-white flex flex-col"
     >
       {/* Thumbnail */}
-      <div className="w-full h-44 md:h-72 overflow-hidden relative bg-gradient-to-t from-black via-black to-blue-800">
-        <div className="absolute bottom-0 w-full py-2 flex flex-row flex-wrap px-4 gap-2 z-10">
+      <div className="w-full h-36 md:h-72 overflow-hidden relative bg-gradient-to-t from-black via-black to-blue-800">
+        <div className="absolute bottom-0 w-full py-2 flex flex-row flex-wrap px-4 gap-1 md:gap-2 z-10">
           {/* jenis informasi */}
-          <span className="bg-black/60 text-white text-xs font-medium px-2 py-1 rounded-full">
+          <span className="bg-black/60 text-white text-[10px] md:text-xs font-medium px-2 py-1 rounded-full">
             {jenisInformasi}
           </span>
 
@@ -30,7 +30,7 @@ const CardBerita = ({
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-black/60 text-white text-xs font-medium px-2 py-1 rounded-full"
+              className="bg-black/60 text-white text-[8px] md:text-xs font-medium px-2 md:px-2 py-1 rounded-full hidden md:block"
             >
               {tag}
             </span>
