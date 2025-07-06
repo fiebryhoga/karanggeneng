@@ -27,7 +27,7 @@ const FilterInformasi = ({ activeFilter, onChange }) => {
               className={`
                 flex-1 h-full
                 ${borderClass} border-blue-800/20
-                px-1 md:px-4 cursor-pointer flex flex-row justify-center items-center text-xs md:text-sm font-medium
+                px-3 md:px-4 cursor-pointer flex flex-row justify-center items-center text-xs md:text-sm font-medium
                 ${
                   activeFilter === filter
                     ? "bg-blue-800/80 text-white"

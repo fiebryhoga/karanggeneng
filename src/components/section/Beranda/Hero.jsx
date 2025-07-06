@@ -3,7 +3,9 @@ import NavigationHero from "@/components/common/NavigationHero";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center relative bg-gradient-to-t from-black via-black to-blue-900 overflow-hidden">
+    <div className="w-full h-screen flex flex-col justify-center items-center relative overflow-hidden bg-blue-900">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black to-blue-900 opacity-80"></div>
       {/* Background image */}
       <img
         src="/assets/image/home/bg-hero.jpeg"
